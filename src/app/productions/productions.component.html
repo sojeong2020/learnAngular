@@ -1,0 +1,24 @@
+<app-navigation></app-navigation>
+
+
+<h1 class="text-center">List of Beer</h1>
+
+
+ <div class="container">
+
+    <ul class="flex-item" *ngFor="let beer of beers">
+      <div class="card">
+
+      <div class="card-content">
+        <p class="card-title"> <span>ID {{beer.id}}</span> {{beer.name}}</p>  
+        <p>{{beer.description}}</p>
+      </div> 
+      <div class="card-footer">
+         <p class="text-right"><a [routerLink]="['/production/',beer.id]">DETAIL</a></p>
+         <!-- <button (click)="onClick(beer)">More about</button> -->
+      </div>
+
+      </div>
+    </ul>
+    
+</div> 
